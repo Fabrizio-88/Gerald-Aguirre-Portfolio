@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerald Aguirre | Mechanical Engineer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        slateDark: '#0f172a',
+                        steel: {
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        #projectModal:not(.hidden) > div { animation: fadeInScale 0.25s ease-out forwards; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-steel-500 selection:text-white">
+
+    <!-- ========================================== -->
+    <!--            NAVIGATION HEADER               -->
+    <!-- ========================================== -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-slate-900 flex items-center gap-2.5 group">
+                <span class="w-8 h-8 rounded-lg bg-slateDark text-white flex items-center justify-center text-sm group-hover:rotate-90 transition-transform duration-300 shadow-sm">
+                    <i class="fa-solid fa-gear text-white"></i>
+                </span>
+                Gerald Aguirre
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-steel-600 transition-colors">About</a>
+                <a href="#education" class="hover:text-steel-600 transition-colors">Education</a>
+                <a href="#skills" class="hover:text-steel-600 transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-steel-600 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-steel-600 transition-colors">Projects</a>
+                <a href="#certifications" class="hover:text-steel-600 transition-colors">Certifications</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="https://linkedin.com/in/geraldaguirre" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-steel-500 hover:text-white transition-all shadow-sm flex items-center gap-2 text-sm font-medium">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span class="hidden sm:inline">LinkedIn</span>
+                </a>
+                <a href="mailto:geralda@seoscholars.org" class="px-4 py-2.5 rounded-lg bg-slateDark text-white hover:bg-steel-600 transition-all text-sm font-medium shadow-sm">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!--                 HERO SECTION               -->
+    <!-- ========================================== -->
+    <section class="relative py-20 lg:py-28 bg-slateDark text-white overflow-hidden border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-semibold tracking-wide uppercase">
+                    <span class="w-2 h-2 rounded-full bg-steel-500"></span> Mechanical Engineering | Columbia University
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+                    Engineering Innovation from Concept to Prototype.
+                </h1>
+                <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">
+                    Mechanical Engineering student at Columbia University with an Aerospace minor, specializing in CAD, finite element analysis, PCB design, and rapid prototyping across aerospace, automotive, and biomedical systems.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#projects" class="px-6 py-3 rounded-xl bg-steel-500 text-white font-semibold hover:bg-steel-600 transition-all shadow-lg flex items-center gap-2">
+                        <i class="fa-solid fa-folder-open"></i> View Projects
+                    </a>
+                    <a href="#about" class="px-6 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white font-semibold hover:bg-slate-700 transition-all shadow-sm">
+                        About Me
+                    </a>
+                </div>
+                <div class="pt-6 border-t border-slate-800 flex flex-wrap items-center gap-6 text-sm text-slate-300">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-steel-500"></i> San Francisco, CA / New York, NY
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-steel-500"></i> (415) 254-2442
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-steel-500"></i> geralda@seoscholars.org
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="w-full max-w-md bg-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-700 relative">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-user-gear text-white"></i> Professional Profile
+                    </h3>
+                    <ul class="space-y-4 text-sm text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-graduation-cap text-white mt-1"></i>
+                            <div><strong class="text-white">Columbia University:</strong> B.S. Mechanical Engineering (Expected May 2027)</div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-compass-drafting text-white mt-1"></i>
+                            <div><strong class="text-white">Core Focus:</strong> CAD, FEA Simulation, PCB Design, and Additive Manufacturing.</div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-shield-halved text-white mt-1"></i>
+                            <div><strong class="text-white">Languages:</strong> Fluent in Spanish (Reading & Writing).</div>
+                        </li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-slate-700 flex justify-between items-center text-xs text-slate-400">
+                        <span>Active System Ready</span>
+                        <a href="https://linkedin.com/in/geraldaguirre" target="_blank" rel="noopener noreferrer" class="text-white hover:underline font-medium">Connect on LinkedIn &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!--              BIOGRAPHY SECTION             -->
+    <!-- ========================================== -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Biography</h2>
+                <p class="text-slate-600 mt-2">Get to know the person behind the engineering designs and technical projects.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 h-80 sm:w-80 sm:h-96 rounded-2xl bg-slate-100 border-4 border-slate-200 shadow-xl overflow-hidden group">
+                        <img src="SEOSeniorPhotos-66.jpg" alt="Gerald Aguirre" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20">
+                            <span class="text-xs font-semibold text-slate-800 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">Gerald Aguirre</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-900">Passionate Mechanical Engineer & Innovator</h3>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Hello! I am Gerald Aguirre, a dedicated Mechanical Engineering undergraduate with an Aerospace minor at Columbia University School of Engineering and Applied Science (Expected May 2027). My academic and extracurricular journey is driven by a deep fascination with how physical systems come together—from conceptual CAD sketching and advanced finite element analysis to hands-on PCB fabrication and rapid prototyping.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Whether designing primary airframe structures for the Columbia Airplane Club, contributing to microgravity additive manufacturing systems with the Columbia Space Initiative, or conducting biomedical research in the Dong Group and ROAR Lab, I thrive on solving complex, multidisciplinary engineering challenges. Beyond technical work, I am bilingual in Spanish and deeply committed to pushing the boundaries of aerospace, automotive, and medical hardware design.
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <a href="https://linkedin.com/in/geraldaguirre" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-slateDark text-white font-medium text-sm hover:bg-steel-600 transition-colors flex items-center gap-2 shadow-sm">
+                            <i class="fa-brands fa-linkedin-in"></i> View LinkedIn Profile
+                        </a>
+                        <a href="mailto:geralda@seoscholars.org" class="px-5 py-2.5 rounded-xl bg-slate-100 text-slate-700 font-medium text-sm hover:bg-slate-200 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-envelope"></i> Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!--              EDUCATION SECTION             -->
+    <!-- ========================================== -->
+    <section id="education" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Education & Coursework</h2>
+                <p class="text-slate-600 mt-2">Rigorous academic foundation at Columbia University School of Engineering and Applied Science.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-6 border-b border-slate-200">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900">Columbia University, New York, NY</h3>
+                        <p class="text-steel-600 font-semibold text-lg">B.S. Mechanical Engineering; Minor in Aerospace Engineering</p>
+                    </div>
+                    <span class="px-4 py-1.5 bg-slateDark text-white rounded-full text-sm font-medium w-fit">Expected May 2027</span>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Relevant Coursework</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Engineering Design</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Machine Design</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Solid Mechanics</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Dynamics & Vibrations</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Materials & Manufacturing</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Composites</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Aerodynamics</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Rapid Prototyping for Aerospace</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Microgravity Experiment Design</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Continuous Control Systems</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Intro to Electrical Engineering</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Fluid Mechanics</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Thermodynamics & Heat Transfer</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Computer Graphics & Design</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Intro to Machining</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">ME Labs I-II</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!--           TECHNICAL SKILLS SECTION         -->
+    <!-- ========================================== -->
+    <section id="skills" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Technical Skills</h2>
+                <p class="text-slate-600 mt-2">Comprehensive engineering competencies spanning computer-aided design, advanced simulation, manufacturing, and programming.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 rounded-lg bg-slate-800 text-white flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-cube text-white"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">CAD & Design</h3>
+                    <p class="text-sm text-slate-600 mb-4">Engineering drawings, assembly modeling, and complex design iteration.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">SolidWorks</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Siemens NX</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Fusion 360</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">CATIA</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">AutoCAD</span>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 rounded-lg bg-slate-800 text-white flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-chart-line text-white"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Analysis & Simulation</h3>
+                    <p class="text-sm text-slate-600 mb-4">Structural FEA, thermal evaluation, computational fluid dynamics, and scripting.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Ansys</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">SolidWorks FEA</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">CFD</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">MATLAB/Simulink</span>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 rounded-lg bg-slate-800 text-white flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-industry text-white"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Manufacturing & Prototyping</h3>
+                    <p class="text-sm text-slate-600 mb-4">Rapid prototyping, precision machining, and tooling design.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">CNC Machining</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Injection Molding</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">3D Printing</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Laser Cutting</span>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 rounded-lg bg-slate-800 text-white flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-microchip text-white"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Electronics & Hardware</h3>
+                    <p class="text-sm text-slate-600 mb-4">PCB layout, board bring-up, microcontroller systems, and circuit modeling.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">KiCad</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Eagle</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Soldering & Bring-up</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Arduino</span>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 rounded-lg bg-slate-800 text-white flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-code text-white"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Programming & Tools</h3>
+                    <p class="text-sm text-slate-600 mb-4">Software development, technical documentation, and design suites.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Python</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">JavaScript</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">HTML/CSS</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Figma</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Google Workspace</span>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 rounded-lg bg-slate-800 text-white flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-gears text-white"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Core Engineering</h3>
+                    <p class="text-sm text-slate-600 mb-4">Design principles, material selection, and rigorous testing protocols.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Machine Design</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Materials Selection</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">DFM / DFA</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">Test Planning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!--             EXPERIENCE SECTION             -->
+    <!-- ========================================== -->
+    <section id="experience" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Engineering Experience</h2>
+                <p class="text-slate-600 mt-2">Hands-on leadership and technical contributions in research labs and student design teams.</p>
+            </div>
+
+            <div class="space-y-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:border-slate-300 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Structures Engineer</h3>
+                            <p class="text-steel-600 font-semibold">Columbia Airplane Club, Columbia University</p>
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium w-fit">Sep 2026 - Present</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm leading-relaxed">
+                        <li>Design lightweight primary airframe structures, including wing spars, ribs, and fuselage supports, in SolidWorks for the AIAA Design/Build/Fly competition aircraft.</li>
+                        <li>Perform finite element analysis of structural loads, stress distribution, and deformation to drive material selection, weight optimization, and structural test planning.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:border-slate-300 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Controls Engineer</h3>
+                            <p class="text-steel-600 font-semibold">Columbia Space Initiative</p>
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium w-fit">Jan 2026 - Present</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm leading-relaxed">
+                        <li>Developed and iterated CAD models for an in-space 3D printer, including structural frames, print heads, and material-handling systems, under microgravity design constraints.</li>
+                        <li>Evaluated materials and structural performance under thermal variation and launch loads to improve hardware reliability for space-based additive manufacturing.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:border-slate-300 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Research Fellow</h3>
+                            <p class="text-steel-600 font-semibold">Dong Group, Columbia University</p>
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium w-fit">Jan 2026 - Present</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm leading-relaxed">
+                        <li>Designed micro-scale components of a steerable neural electrode in SolidWorks and used Ansys FEA to assess stress distribution, bending behavior, and buckling during curved insertion.</li>
+                        <li>Selected polymers by stiffness, flexibility, and biocompatibility and validated performance through gel phantom insertion tests with optical imaging and quantitative data analysis.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:border-slate-300 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Research Fellow</h3>
+                            <p class="text-steel-600 font-semibold">Flower Memorial Lab, Columbia University</p>
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium w-fit">Jun 2025 - Jul 2025</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm leading-relaxed">
+                        <li>Designed PCB hardware for a medical fixation device in KiCad, optimizing component layout and engineering a sealed enclosure to protect the electronics.</li>
+                        <li>Modeled series LRC circuits in MATLAB, analyzing voltage drops, current flow, resonance, and transient response to optimize electronic design parameters.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:border-slate-300 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Controls Engineer</h3>
+                            <p class="text-steel-600 font-semibold">Columbia University Formula Racing</p>
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium w-fit">Sep 2023 - May 2025</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm leading-relaxed">
+                        <li>Prototyped a redesigned pedal baseplate using 3D printing and laser cutting, then assembled and tested it on the existing chassis to validate fit and function.</li>
+                        <li>Collaborated with teammates to refine design specifications and ensure compatibility with existing vehicle systems while building hands-on manufacturing and assembly experience.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:border-slate-300 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Research Assistant</h3>
+                            <p class="text-steel-600 font-semibold">Robotics and Rehabilitation (ROAR) Lab, Columbia University</p>
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium w-fit">Aug 2024 - May 2025</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm leading-relaxed">
+                        <li>Designed and built a robotic neck brace prototype in CAD, expanding head-movement range for mobility and comfort, and developed thread designs that align sensors and joints in parallel to increase stability and eliminate unwanted motion.</li>
+                        <li>Engineered a new PCB layout in Eagle integrating a 5V power supply to improve the functionality and performance of the prototype.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:border-slate-300 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Proposal Developer & Researcher</h3>
+                            <p class="text-steel-600 font-semibold">NASA L'SPACE NPWEE Program, Remote</p>
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium w-fit">Sep 2024 - Dec 2024</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm leading-relaxed">
+                        <li>Analyzed experimental data and literature to define proposal metrics for the Basalt Aerogel Shock-absorbing Insulation System, including thermal conductivity and durability across planetary environments.</li>
+                        <li>Modeled the layered insulation design in Siemens NX (aerogel, basalt fiber fabric, polyimide encapsulation) to support design visualization and proposal documentation.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!--              PROJECTS SECTION              -->
+    <!-- ========================================== -->
+    <section id="projects" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Featured Projects</h2>
+                <p class="text-slate-600 mt-2">Click on any project below to inspect detailed specifications, implementation steps, and high-resolution previews.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project: Slide to Solve Toy -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <div class="h-52 bg-slate-900 p-6 flex flex-col justify-between relative overflow-hidden group">
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:16px_16px]"></div>
+                            <div class="flex justify-between items-start relative z-10">
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full text-xs font-semibold">Product Design</span>
+                                <span class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-white text-lg shadow-sm">
+                                    <i class="fa-solid fa-puzzle-piece text-white"></i>
+                                </span>
+                            </div>
+                            <div class="relative z-10">
+                                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Drawn by Gerald Aguirre & Levis Alvaro</span>
+                                <h3 class="text-xl font-bold text-white mt-0.5">Slide to Solve Toy</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-3">Full parametric assembly, detailed BOM, and exploded view drawings for a multi-component ABS plastic sliding number puzzle game.</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">SolidWorks</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">BOM Specification</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Engineering Drawings</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openProjectModal('slideToy')" class="w-full py-2.5 rounded-xl bg-slateDark text-white font-medium text-sm hover:bg-steel-600 transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project: Mechanical Jack Assembly & CNC/3D Printing -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <div class="h-52 bg-slate-900 p-6 flex flex-col justify-between relative overflow-hidden group">
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:16px_16px]"></div>
+                            <div class="flex justify-between items-start relative z-10">
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full text-xs font-semibold">Manufacturing & CAM</span>
+                                <span class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-white text-lg shadow-sm">
+                                    <i class="fa-solid fa-wrench text-white"></i>
+                                </span>
+                            </div>
+                            <div class="relative z-10">
+                                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Advanced Manufacturing Project</span>
+                                <h3 class="text-xl font-bold text-white mt-0.5">Mechanical Jack Assembly & Machining</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-3">Executed full manufacturing and assembly workflow for a mechanical jack, combining 3D-printed custom left/right link arms, CAM-programmed CNC block machining, and tolerance integration.</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">CAM & CNC Machining</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">3D Printing</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Mechanical Assembly</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openProjectModal('jackAssembly')" class="w-full py-2.5 rounded-xl bg-slateDark text-white font-medium text-sm hover:bg-steel-600 transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project: SolidWorks Toy Airplane Modeling -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <div class="h-52 bg-slate-900 p-6 flex flex-col justify-between relative overflow-hidden group">
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:16px_16px]"></div>
+                            <div class="flex justify-between items-start relative z-10">
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full text-xs font-semibold">CAD & Modeling</span>
+                                <span class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-white text-lg shadow-sm">
+                                    <i class="fa-solid fa-plane text-white"></i>
+                                </span>
+                            </div>
+                            <div class="relative z-10">
+                                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Reverse Engineering Project</span>
+                                <h3 class="text-xl font-bold text-white mt-0.5">Toy Airplane CAD Modeling</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-3">Reverse-engineered a physical toy airplane using precision caliper measurements and advanced SolidWorks tools including lofts, wraps, revolved features, and reference planes.</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">SolidWorks</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Surface Lofts & Wraps</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Flex & Curves</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openProjectModal('airplaneCAD')" class="w-full py-2.5 rounded-xl bg-slateDark text-white font-medium text-sm hover:bg-steel-600 transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 1: In-Space 3D Printer -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <div class="h-52 bg-slate-900 p-6 flex flex-col justify-between relative overflow-hidden group">
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:16px_16px]"></div>
+                            <div class="flex justify-between items-start relative z-10">
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full text-xs font-semibold">Space Systems</span>
+                                <span class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-white text-lg shadow-sm">
+                                    <i class="fa-solid fa-satellite text-white"></i>
+                                </span>
+                            </div>
+                            <div class="relative z-10">
+                                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Columbia Space Initiative</span>
+                                <h3 class="text-xl font-bold text-white mt-0.5">In-Space 3D Printer</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-3">CAD iteration and structural optimization for a microgravity additive manufacturing system under extreme thermal and launch loads.</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">SolidWorks</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">FEA Analysis</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Thermal Testing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openProjectModal('spacePrinter')" class="w-full py-2.5 rounded-xl bg-slateDark text-white font-medium text-sm hover:bg-steel-600 transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2: Steerable Neural Electrode -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <div class="h-52 bg-slate-900 p-6 flex flex-col justify-between relative overflow-hidden group">
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:16px_16px]"></div>
+                            <div class="flex justify-between items-start relative z-10">
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full text-xs font-semibold">Biomedical Engineering</span>
+                                <span class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-white text-lg shadow-sm">
+                                    <i class="fa-solid fa-dna text-white"></i>
+                                </span>
+                            </div>
+                            <div class="relative z-10">
+                                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Dong Group, Columbia</span>
+                                <h3 class="text-xl font-bold text-white mt-0.5">Steerable Neural Electrode</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-3">Design of micro-scale components for neural probing with Ansys FEA validation and gel phantom optical insertion testing.</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">SolidWorks</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Ansys FEA</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Polymer Selection</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openProjectModal('neuralElectrode')" class="w-full py-2.5 rounded-xl bg-slateDark text-white font-medium text-sm hover:bg-steel-600 transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3: Basalt Aerogel Insulation -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <div class="h-52 bg-slate-900 p-6 flex flex-col justify-between relative overflow-hidden group">
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:16px_16px]"></div>
+                            <div class="flex justify-between items-start relative z-10">
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full text-xs font-semibold">Aerospace & NASA</span>
+                                <span class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-white text-lg shadow-sm">
+                                    <i class="fa-solid fa-rocket text-white"></i>
+                                </span>
+                            </div>
+                            <div class="relative z-10">
+                                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">NASA L'SPACE Program</span>
+                                <h3 class="text-xl font-bold text-white mt-0.5">Basalt Aerogel Insulation</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-3">Layered thermal insulation system modeling for planetary environments developed under the NASA L'SPACE NPWEE program.</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Siemens NX</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Thermal Analysis</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Aerospace Proposal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openProjectModal('aerogelSystem')" class="w-full py-2.5 rounded-xl bg-slateDark text-white font-medium text-sm hover:bg-steel-600 transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 4: Robotic Neck Brace -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <div class="h-52 bg-slate-900 p-6 flex flex-col justify-between relative overflow-hidden group">
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:16px_16px]"></div>
+                            <div class="flex justify-between items-start relative z-10">
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full text-xs font-semibold">Robotics & Rehab</span>
+                                <span class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-white text-lg shadow-sm">
+                                    <i class="fa-solid fa-robot text-white"></i>
+                                </span>
+                            </div>
+                            <div class="relative z-10">
+                                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">ROAR Lab, Columbia</span>
+                                <h3 class="text-xl font-bold text-white mt-0.5">Robotic Neck Brace</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-3">CAD design and parallel sensor joint integration for mobility-expanding robotic neck support with custom PCB layout.</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">CAD Modeling</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Eagle PCB</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Sensor Alignment</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openProjectModal('neckBrace')" class="w-full py-2.5 rounded-xl bg-slateDark text-white font-medium text-sm hover:bg-steel-600 transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 5: Formula Racing Pedal Baseplate -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <div class="h-52 bg-slate-900 p-6 flex flex-col justify-between relative overflow-hidden group">
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:16px_16px]"></div>
+                            <div class="flex justify-between items-start relative z-10">
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full text-xs font-semibold">Automotive Engineering</span>
+                                <span class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-white text-lg shadow-sm">
+                                    <i class="fa-solid fa-car-side text-white"></i>
+                                </span>
+                            </div>
+                            <div class="relative z-10">
+                                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Columbia Formula Racing</span>
+                                <h3 class="text-xl font-bold text-white mt-0.5">Formula Racing Pedal Baseplate</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-3">Rapid prototyping, 3D printing, and laser cutting for an optimized racing vehicle pedal baseplate assembly and testing.</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Rapid Prototyping</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Laser Cutting</span>
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600">Chassis Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openProjectModal('formulaPedal')" class="w-full py-2.5 rounded-xl bg-slateDark text-white font-medium text-sm hover:bg-steel-600 transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!--            CERTIFICATIONS SECTION          -->
+    <!-- ========================================== -->
+    <section id="certifications" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Certifications & Honors</h2>
+                <p class="text-slate-600 mt-2">Professional credentials and academic recognition supporting engineering excellence.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-slate-800 text-white flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-certificate text-white"></i></div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">QuestBridge Scholar</h3>
+                        <p class="text-xs text-slate-500 mb-2">Awarded 2022</p>
+                        <p class="text-sm text-slate-600">National recognition supporting exceptional academic achievement and leadership.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-slate-800 text-white flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-award text-white"></i></div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">10,000 Degrees Scholar</h3>
+                        <p class="text-xs text-slate-500 mb-2">Awarded 2022</p>
+                        <p class="text-sm text-slate-600">Scholarship and professional mentorship program backing higher education.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-slate-800 text-white flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-medal text-white"></i></div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">Students Rising Above Scholar</h3>
+                        <p class="text-xs text-slate-500 mb-2">Awarded 2022</p>
+                        <p class="text-sm text-slate-600">Comprehensive leadership and career development fellowship.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!--               FOOTER SECTION               -->
+    <!-- ========================================== -->
+    <footer class="bg-slateDark text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <p class="text-lg font-bold">Gerald Aguirre</p>
+                <p class="text-sm text-slate-400 mt-1">Mechanical Engineering | Columbia University</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://linkedin.com/in/geraldaguirre" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-steel-500 transition-colors">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:geralda@seoscholars.org" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-steel-500 transition-colors">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-6 mt-8 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+            &copy; 2026 Gerald Aguirre. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!--               PROJECT MODAL                -->
+    <!-- ========================================== -->
+    <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden p-4 sm:p-6">
+        <div class="bg-white rounded-2xl max-w-5xl w-full max-h-[95vh] overflow-y-auto shadow-2xl relative animate-in fade-in zoom-in duration-200">
+            <button onclick="closeProjectModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center justify-center font-bold transition-colors z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalContent" class="p-8 sm:p-12">
+                <!-- Dynamic Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Embedded Portfolio Data & Logic -->
+    <script>
+        const PORTFOLIO_DATA = {
+            projects: {
+                slideToy: {
+                    title: "Slide to Solve Toy",
+                    subtitle: "Mechanical Design & Prototyping (Drawn by Gerald Aguirre & Levis Alvaro)",
+                    badge: "Product Design",
+                    image: "Slidetoy.png", 
+                    image2: "SlideToy BOM.png",
+                    description: "Designed and engineered a fully interactive mechanical puzzle toy ('Slide to Solve') featuring a multi-component sliding number assembly, internal swing shafts, custom housing, and precision-toleranced ABS plastic components.",
+                    highlights: [
+                        "Created complete assembly drawings, exploded views, and individual part blueprints with detailed GD&T dimensions using SolidWorks.",
+                        "Engineered a Bill of Materials (BOM) specifying Acrylonitrile Butadiene Styrene (ABS) material properties across 9 distinct part assemblies.",
+                        "Designed interlocking slider mechanisms, slot paths, and sub-panel guides ensuring smooth tactile engagement and mechanical reliability."
+                    ],
+                    steps: [
+                        { title: "Parametric CAD Assembly", desc: "Modeled all 9 core components—including the Game Box, Slider Base, Box Top Sub-Assembly, and Slot Paths—with strict clearance tolerances." },
+                        { title: "Drafting & Blueprints", desc: "Generated multi-sheet engineering drawings featuring exact geometric dimensions, radius fillets, hole callouts, and scale ratios." },
+                        { title: "Material & BOM Specification", desc: "Compiled a comprehensive Bill of Materials specifying ABS plastic material parameters and precise component quantity requirements." }
+                    ],
+                    tags: ["SolidWorks", "Product Design", "Mechanical Assembly", "Rapid Prototyping", "GD&T"]
+                },
+                jackAssembly: {
+                    title: "Mechanical Jack Assembly & Machined Links",
+                    subtitle: "CAM Programming, CNC Machining & 3D Printing Workflow",
+                    badge: "Manufacturing & CAM",
+                    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80",
+                    description: "Executed a comprehensive hybrid manufacturing and assembly project to build a working mechanical jack. Combined additive manufacturing for custom left and right link arms with Computer-Aided Manufacturing (CAM) and CNC machining for precision structural blocks.",
+                    highlights: [
+                        "Programmed toolpaths and generated G-code using CAM software for precision CNC machining of metal/plastic blocks.",
+                        "3D printed custom left and right link arms with optimized infill densities for high structural rigidity and load-bearing performance.",
+                        "Performed tolerance stack-up analysis and final physical assembly, integrating pins, fasteners, and links for smooth mechanical operation."
+                    ],
+                    steps: [
+                        { title: "CAM Toolpath Generation", desc: "Developed optimal CNC milling strategies, speeds, feeds, and toolpaths in CAM software for block components." },
+                        { title: "CNC Block Machining", desc: "Machined stock blocks on the CNC mill, ensuring strict dimensional tolerances and clean surface finishes." },
+                        { title: "3D Printing Custom Links", desc: "Fabricated precision left and right link components via additive manufacturing to handle complex articulated loads." },
+                        { title: "Mechanical Assembly & Fit-Up", desc: "Fitted pins, fasteners, and machined blocks together with the 3D printed links to construct and test the functional jack assembly." }
+                    ],
+                    tags: ["CAM", "CNC Machining", "3D Printing", "Rapid Prototyping", "Mechanical Assembly"]
+                },
+                airplaneCAD: {
+                    title: "Toy Airplane CAD Modeling & Reverse Engineering",
+                    subtitle: "SolidWorks Surface & Parametric Modeling",
+                    badge: "CAD & Modeling",
+                    image: "airplane.jpg",
+                    description: "Reverse-engineered a physical toy airplane by taking precise digital caliper measurements and implementing advanced SolidWorks tools, including surface lofts, wraps, revolved features, reference planes, and flex tools.",
+                    highlights: [
+                        "Captured complex organic curves and transition contours of the aircraft body using precise caliper measurements.",
+                        "Utilized advanced SolidWorks modeling tools such as lofts, wraps, revolved bosses, and reference planes to replicate aerodynamic geometry.",
+                        "Addressed sketch constraint conflicts and managed feature tree dependencies to ensure robust parametric rebuild stability."
+                    ],
+                    steps: [
+                        { title: "Physical Measurement & Scoping", desc: "Acquired critical dimensions with calipers, managing irregular curves and fine propeller details." },
+                        { title: "Advanced Lofts & Surface Modeling", desc: "Employed lofts, wraps, and revolved features to smoothly transition between organic body shapes and aerodynamic wings." },
+                        { title: "Rebuild Stability & Refinement", desc: "Resolved constraint conflicts and structured feature trees for robust parametric editing and design intent." }
+                    ],
+                    tags: ["SolidWorks", "Reverse Engineering", "Surface Modeling", "Lofts & Curves", "Design Intent"]
+                },
+                spacePrinter: {
+                    title: "In-Space 3D Printer",
+                    subtitle: "Columbia Space Initiative",
+                    badge: "Space Systems",
+                    image: "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=1200&q=80",
+                    description: "Developed and iterated comprehensive CAD models for an in-space 3D printer under microgravity design constraints. Engineered structural frames, print heads, and material-handling sub-assemblies.",
+                    highlights: [
+                        "Performed rigorous finite element simulations to evaluate structural performance under thermal variation and launch loads.",
+                        "Optimized material selection to maximize system reliability and minimize mass for space deployment.",
+                        "Collaborated across multidisciplinary student engineering teams to align mechanical sub-systems with avionics."
+                    ],
+                    steps: [
+                        { title: "Conceptual CAD Modeling", desc: "Designed modular print-head assemblies and lightweight titanium frames in SolidWorks, accounting for microgravity constraints." },
+                        { title: "FEA Thermal & Launch Simulation", desc: "Executed structural stress analysis under simulated vibrational launch profiles and thermal gradient fluctuations." },
+                        { title: "Prototyping & Integration", desc: "Fabricated functional test articles and integrated extrusion mechanisms with avionics control boards." }
+                    ],
+                    tags: ["SolidWorks", "FEA Analysis", "Thermal Testing", "Additive Manufacturing"]
+                },
+                neuralElectrode: {
+                    title: "Steerable Neural Electrode",
+                    subtitle: "Dong Group, Columbia University",
+                    badge: "Biomedical Engineering",
+                    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80",
+                    description: "Designed micro-scale components for a steerable neural electrode in SolidWorks and utilized Ansys FEA to evaluate stress distribution, bending behavior, and buckling during curved tissue insertion.",
+                    highlights: [
+                        "Selected advanced polymers based on precise stiffness, flexibility, and biocompatibility metrics.",
+                        "Validated physical performance through gel phantom insertion tests paired with optical imaging.",
+                        "Conducted quantitative data analysis to refine structural geometry and minimize tissue deflection."
+                    ],
+                    steps: [
+                        { title: "Micro-Component Design", desc: "Drafted flexible polymer micro-electrode structures in SolidWorks optimized for minimal tissue trauma." },
+                        { title: "Ansys FEA Buckling Analysis", desc: "Simulated curved insertion vectors to prevent premature buckling and ensure smooth tissue tracking." },
+                        { title: "Gel Phantom Validation", desc: "Performed physical insertion tests into transparent hydrogel phantoms, capturing optical displacement data." }
+                    ],
+                    tags: ["SolidWorks", "Ansys FEA", "Polymer Selection", "Optical Imaging"]
+                },
+                aerogelSystem: {
+                    title: "Basalt Aerogel Shock-Absorbing Insulation System",
+                    subtitle: "NASA L'SPACE NPWEE Program",
+                    badge: "Aerospace & NASA",
+                    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+                    description: "Researched and proposed advanced thermal insulation metrics for planetary exploration environments under NASA's NPWEE program.",
+                    highlights: [
+                        "Analyzed experimental literature to define thermal conductivity and shock-absorbing durability across harsh planetary temperatures.",
+                        "Modeled layered insulation assemblies in Siemens NX incorporating aerogel, basalt fiber fabric, and polyimide encapsulation.",
+                        "Authored comprehensive proposal documentation supporting mission feasibility and visualization."
+                    ],
+                    steps: [
+                        { title: "Thermal Literature Review", desc: "Synthesized baseline thermal conductivity and impact dissipation metrics for extreme planetary surfaces." },
+                        { title: "Layered CAD Assembly in Siemens NX", desc: "Modeled composite sandwich layers combining aerogel cores, basalt fabric, and polyimide films." },
+                        { title: "NASA Proposal Synthesis", desc: "Compiled comprehensive technical documentation, mission cost estimates, and deployment feasibility reports." }
+                    ],
+                    tags: ["Siemens NX", "Thermal Analysis", "Aerospace Proposal", "Material Modeling"]
+                },
+                neckBrace: {
+                    title: "Robotic Neck Brace Prototype",
+                    subtitle: "Robotics and Rehabilitation (ROAR) Lab",
+                    badge: "Robotics & Rehab",
+                    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
+                    description: "Designed and built an advanced robotic neck brace prototype in CAD to expand head-movement range, comfort, and therapeutic mobility.",
+                    highlights: [
+                        "Engineered novel thread designs aligning sensors and mechanical joints in parallel to boost stability and eliminate unwanted motion.",
+                        "Developed a new custom PCB layout in Eagle integrating a 5V power supply to drive prototype actuation and sensor readout.",
+                        "Conducted iterative physical testing and ergonomic evaluations."
+                    ],
+                    steps: [
+                        { title: "Ergonomic CAD Iteration", desc: "Modeled articulated support brackets and parallel linkage mechanisms for smooth patient head motion." },
+                        { title: "Eagle PCB Integration", desc: "Designed custom power regulation circuitry and sensor interface boards to drive onboard actuators." },
+                        { title: "Assembly & Range Testing", desc: "Assembled physical prototype hardware and calibrated feedback sensors for ergonomic performance." }
+                    ],
+                    tags: ["CAD Modeling", "Eagle PCB", "Sensor Alignment", "Robotics"]
+                },
+                formulaPedal: {
+                    title: "Formula Racing Pedal Baseplate",
+                    subtitle: "Columbia University Formula Racing",
+                    badge: "Automotive Engineering",
+                    image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1200&q=80",
+                    description: "Redesigned and manufactured an ergonomic pedal baseplate assembly for the Formula Racing vehicle chassis.",
+                    highlights: [
+                        "Prototyped structural concepts using rapid 3D printing and precision laser cutting.",
+                        "Assembled and physically tested components on the existing race car chassis to validate fit, stiffness, and driver ergonomics.",
+                        "Collaborated with teammates to ensure seamless mechanical integration with vehicle control systems."
+                    ],
+                    steps: [
+                        { title: "Driver Ergonomics & CAD", desc: "Captured driver packaging constraints to lay out optimized pedal pivot geometry." },
+                        { title: "Laser Cutting & 3D Printing", desc: "Produced rapid functional prototypes using high-strength polymers and laser-cut aluminum brackets." },
+                        { title: "Chassis Fitting & Rigidity Test", desc: "Mounted assembly into the race car chassis and performed driver footload deflection testing." }
+                    ],
+                    tags: ["Rapid Prototyping", "Laser Cutting", "Chassis Integration", "Testing"]
+                }
+            }
+        };
+
+        function openProjectModal(projectId) {
+            const project = PORTFOLIO_DATA.projects[projectId];
+            if (!project) return;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="space-y-8">
+                    <!-- Header -->
+                    <div class="border-b border-slate-200 pb-6">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-800 rounded-full text-xs font-semibold">${project.badge}</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">${project.title}</h2>
+                        <p class="text-steel-600 font-semibold text-base mt-1">${project.subtitle}</p>
+                    </div>
+
+                    <!-- Project Images (Supports single image or side-by-side dual images) -->
+                    ${project.image || project.image2 ? `
+                        <div class="grid grid-cols-1 ${project.image && project.image2 ? 'sm:grid-cols-2' : ''} gap-4">
+                            ${project.image ? `
+                                <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200 max-h-96 bg-slate-900">
+                                    <img src="${project.image}" alt="${project.title} 1" class="w-full h-full object-cover">
+                                </div>
+                            ` : ''}
+                            ${project.image2 ? `
+                                <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200 max-h-96 bg-slate-900">
+                                    <img src="${project.image2}" alt="${project.title} 2" class="w-full h-full object-cover">
+                                </div>
+                            ` : ''}
+                        </div>
+                    ` : ''}
+                    
+                    <!-- Description -->
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Project Overview</h3>
+                        <p class="text-slate-600 text-base leading-relaxed">${project.description}</p>
+                    </div>
+                    
+                    <!-- Key Contributions -->
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Key Engineering Contributions</h3>
+                        <ul class="space-y-2">
+                            ${project.highlights.map(h => `<li class="flex items-start gap-3 text-sm text-slate-600"><i class="fa-solid fa-check text-steel-500 mt-1 shrink-0"></i><span>${h}</span></li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <!-- Step-by-Step Implementation -->
+                    ${project.steps && project.steps.length > 0 ? `
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4">Implementation Steps & Workflow</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                ${project.steps.map((step, index) => `
+                                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col justify-between">
+                                        <div>
+                                            <span class="text-xs font-bold text-steel-600 uppercase tracking-wider">Step 0${index + 1}</span>
+                                            <h4 class="font-bold text-slate-900 text-base mt-1 mb-2">${step.title}</h4>
+                                            <p class="text-xs text-slate-600 leading-relaxed">${step.desc}</p>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+
+                    <!-- Technologies Used -->
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Technologies & Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            ${project.tags.map(t => `<span class="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold">${t}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Close Button Footer -->
+                    <div class="pt-6 border-t border-slate-200 flex justify-end">
+                        <button onclick="closeProjectModal()" class="px-8 py-3 bg-slateDark text-white rounded-xl text-sm font-medium hover:bg-steel-600 transition-colors shadow-md">
+                            Close Details
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('projectModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProjectModal() {
+            document.getElementById('projectModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('projectModal').addEventListener('click', (e) => {
+            if (e.target.id === 'projectModal') {
+                closeProjectModal();
+            }
+        });
+    </script>
+</body>
+</html>
