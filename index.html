@@ -294,7 +294,7 @@ const PROJECTS = {
     tags:["CAD Modeling","Reverse Engineering","Parametric Design","Loft Features","Revolved Features","Surface Modeling","Geometric Constraints","Design for Manufacturing"] },
 
   fourBarLinkage: { icon:"diagram-project", badge:"Machine Design & Kinematics", kicker:"MECE E3409 Machine Design", cardTitle:"Four-Bar Linkage Design & Assembly",
-    title:"Four-Bar Linkage: Synthesis, Design & Assembly", subtitle:"MECE E3409 Machine Design, PA1 Sketch Synthesis and PA3 Full Assembly (Fall 2026)",
+    title:"Four-Bar Linkage: Synthesis, Design & Assembly", subtitle:"MECE E3409 Machine Design",
     short:"End-to-end design of a button-pressing four-bar linkage: graphical three-position synthesis in SolidWorks sketch blocks, then a full assembly with bearing-supported pivot joints, a 3-position rotary solenoid pusher, and hard stops.",
     images:["MD Parts.png","MD Stopper.png","PA3_Joint_Section.png","PA3_Full_Assembly.png"],
     pdf:"Machine_Design_PA3_Assembly.pdf",
@@ -313,7 +313,7 @@ const PROJECTS = {
     tags:["SolidWorks","BOM Specification","Engineering Drawings","GD&T","Rapid Prototyping"] },
 
   deadFloat: { icon:"user-astronaut", badge:"Microgravity Systems", kicker:"Columbia Microgravity | PDR", cardTitle:"Dead Float Rescue Device",
-    title:"Dead Float Rescue Device", subtitle:"Columbia Microgravity | Preliminary Design Review, October 29, 2026",
+    title:"Dead Float Rescue Device", subtitle:"Columbia Microgravity | Preliminary Design Review",
     short:"Handheld counter-rotating dual-EDF tool for controlled translation in microgravity, designed for intra-vehicular emergencies and taken through a Preliminary Design Review for a parabolic-flight test.",
     description:"A handheld counter-rotating fan tool for controlled translation in microgravity, intended for intra-vehicular emergencies where a crew member is floating with nothing to push off. The research question: how effective and controlled is a handheld electric-fan tool for translating in microgravity, and how does thrust alignment with the center of mass affect unintended motion? Advisor: Prof. Cody Paige.",
     highlights:["Electronics lead: designed the power and control architecture, including a main fuse and removable arming connector, a power split to the propulsion and control branches, and a 5 V regulator for the Arduino UNO R4.","PCB and wiring design: integrated the thumb throttle (analog input), two 80 A ESCs driven by PWM, the MPU-6050 IMU over I²C, a microSD logger over SPI, and a battery voltage sense line into one control schematic.","Baseline design: two 64 mm counter-rotating EDFs (CW + CCW) to cancel net reaction torque, powered by a 4S LiPo (14.8 V, 5200 mAh) through two 80 A ESCs.","Control: Arduino UNO R4 reading a thumb throttle; safety logic requires armed + trigger held + valid input, with zero thrust on release or fault.","Hypothesis: about 0.25 m/s² single-axis acceleration (20 N on an 80 kg user), with thrust through the center of mass minimizing angular velocity and off-axis drift.","Data acquisition: MPU-6050 IMU, throttle and battery logging to microSD, plus multi-camera body-marker tracking for 6-DoF analysis.","Safety: tether, dead-man trigger, removable arming connector, fusing, guarded EDFs, and a preliminary hazard matrix covering LiPo thermal events, blade contact, runaway thrust, and shorting.","Planned schedule to CDR (Dec 5/12) with a BOM of $551.60 and 20% contingency."],
@@ -321,7 +321,7 @@ const PROJECTS = {
     tags:["PCB Design","EDF Propulsion","Arduino Systems","LiPo Power Systems","Hazard Analysis","Microgravity"] },
 
   rescueUAV: { icon:"kit-medical", badge:"Aerospace Senior Design", kicker:"Aero Senior Design Group #1 | PDR", cardTitle:"Rescue UAV",
-    title:"Rescue UAV: Search & Emergency Supply Delivery Quadcopter", subtitle:"Aero Senior Design Group #1 | Preliminary Design Review, Columbia Engineering",
+    title:"Rescue UAV: Search & Emergency Supply Delivery Quadcopter", subtitle:"Aero Senior Design| Preliminary Design Review",
     short:"Quadcopter UAV to assist emergency responders with search and delivery of emergency supplies, with a custom ground-station dashboard validated in ArduPilot simulation and a Pixhawk-based hardware architecture.",
     description:"A senior design team project to build a UAV that assists emergency responders in search and delivery of emergency supplies. The planned system is a weatherproof quadcopter with a supply payload bay, visual and thermal cameras, and air quality sensors. Sprint 1 focused on component selection, ordering, and software readiness; Sprint 2 moves from simulation to integrated real hardware while sizing motors and validating the airframe design and manufacturing methods.",
     highlights:["Selected and ordered a compatible hardware stack: Pixhawk 6C flight controller, PM07 power board, Holybro Micro M10 GPS, SIYI HM30 radio/camera/ground-station set, and a 6S-to-4S BEC, all powered from a 22.2 V 6S battery.","Drew the hardware wiring architecture covering power distribution, ESCs and motors, telemetry, camera feeds, and an ESP32-based air quality sensor.","Built a custom dashboard with quick controls (arm, takeoff, loiter, RTL, land), live telemetry, a live satellite map, a video feed, and PM2.5/PM10 environmental readings.","Demonstrated arm, takeoff, guided flight, and return-to-launch in an ArduPilot Mission Planner simulation.","Passed 4 of 5 Sprint 1 readiness gates (simulated flight control, telemetry, environmental data display, operator controls); wireless telemetry was not tested because the radio hardware had not yet arrived.","Maintained a risk register covering radio and sensor delivery delays, incomplete motor sizing, hardware/software incompatibility, and an undefined payload release mechanism."],
@@ -329,7 +329,7 @@ const PROJECTS = {
     tags:["ArduPilot","Pixhawk 6C","Mission Planner","UAV Systems Integration","Dashboard Development","Risk Management"] },
 
   solarTracker: { icon:"solar-panel", badge:"Mechatronics & Control", kicker:"MECE E3028 Lab II", cardTitle:"Dual Axis Solar Tracker",
-    title:"Dual Axis Solar Tracker", subtitle:"MECE E3028 Mechanical Engineering Laboratory II (Lab Group 7)",
+    title:"Dual Axis Solar Tracker", subtitle:"MECE E3028 Mechanical Engineering Laboratory II",
     short:"Designed and evaluated an automated dual-axis solar tracker using an Arduino Uno, a four-quadrant LDR array, and a hybrid stepper/DC motor actuation scheme.",
     image:"Solar Tracker.png", image2:"Solar Tracker Final Design.png", pdf:"MECE_Lab_II_Report___Solar_Tracker.pdf",
     description:"Designed and evaluated an automated dual-axis solar tracking system to maximize photovoltaic energy capture using an Arduino Uno, differential light sensing from a four-quadrant LDR array, and a closed-loop proportional control algorithm.",
@@ -362,7 +362,7 @@ const PROJECTS = {
     tags:["SolidWorks","Ansys FEA","Polymer Selection","Optical Imaging"] },
 
   teslaValve: { icon:"water", badge:"Fluid Dynamics & CFD", kicker:"MECE E3100 Fluids Project", cardTitle:"Tesla Valve Analysis",
-    title:"Tesla Valve Analysis", subtitle:"MECE E3100 Introduction to Mechanics of Fluids (Team #10)",
+    title:"Tesla Valve Analysis", subtitle:"MECE E3100 Introduction to Mechanics of Fluids",
     short:"Analyzed laminar flow performance of a Tesla Valve across Reynolds numbers from 50 to 350 using ANSYS Fluent CFD, evaluating diodicity, grid convergence, and geometric design modifications.",
     image:"Tesla Valve.png", image2:"Valve Results.png", pdf:"TeslaValve_Final_Fluids.pdf",
     description:"Analyzed the performance of a Tesla Valve under laminar flow using computational fluid dynamics in ANSYS Fluent across Reynolds numbers from 50 to 350. Evaluated diodicity, grid convergence, and geometric design modifications.",
