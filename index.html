@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerald Aguirre | Mechanical Engineer Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  fontFamily: { sans: ['Inter', 'sans-serif'] },
+  colors: { slateDark: '#0f172a', steel: { 500: '#3b82f6', 600: '#2563eb' } }
+} } }
+</script>
+<style>
+html { scroll-behavior: smooth; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+@keyframes fadeInScale { from { opacity: 0; transform: scale(.95); } to { opacity: 1; transform: scale(1); } }
+#projectModal:not(.hidden) > div { animation: fadeInScale .25s ease-out forwards; }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-steel-500 selection:text-white">
+
+<!-- NAV -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="#" class="text-xl font-bold tracking-tight text-slate-900 flex items-center gap-2.5 group">
+      <span class="w-8 h-8 rounded-lg bg-slateDark text-white flex items-center justify-center text-sm group-hover:rotate-90 transition-transform duration-300 shadow-sm"><i class="fa-solid fa-gear"></i></span>
+      Gerald Aguirre
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+      <a href="#about" class="hover:text-steel-600 transition-colors">About</a>
+      <a href="#education" class="hover:text-steel-600 transition-colors">Education</a>
+      <a href="#skills" class="hover:text-steel-600 transition-colors">Skills</a>
+      <a href="#experience" class="hover:text-steel-600 transition-colors">Experience</a>
+      <a href="#projects" class="hover:text-steel-600 transition-colors">Projects</a>
+      <a href="#certifications" class="hover:text-steel-600 transition-colors">Certifications</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="https://linkedin.com/in/geraldaguirre" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-steel-500 hover:text-white transition-all shadow-sm flex items-center gap-2 text-sm font-medium"><i class="fa-brands fa-linkedin-in"></i><span class="hidden sm:inline">LinkedIn</span></a>
+      <a href="mailto:geralda@seoscholars.org" class="px-4 py-2.5 rounded-lg bg-slateDark text-white hover:bg-steel-600 transition-all text-sm font-medium shadow-sm">Contact Me</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative py-20 lg:py-28 bg-slateDark text-white overflow-hidden border-b border-slate-800">
+  <div class="max-w-6xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7 space-y-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-semibold tracking-wide uppercase"><span class="w-2 h-2 rounded-full bg-steel-500"></span> Mechanical Engineering | Columbia University</div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">Engineering Innovation from Concept to Prototype.</h1>
+      <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">Mechanical Engineering student at Columbia University with an Aerospace minor, specializing in CAD, finite element analysis, PCB design, and rapid prototyping across aerospace, automotive, and biomedical systems.</p>
+      <div class="flex flex-wrap gap-4 pt-2">
+        <a href="#projects" class="px-6 py-3 rounded-xl bg-steel-500 text-white font-semibold hover:bg-steel-600 transition-all shadow-lg flex items-center gap-2"><i class="fa-solid fa-folder-open"></i> View Projects</a>
+        <a href="#about" class="px-6 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white font-semibold hover:bg-slate-700 transition-all shadow-sm">About Me</a>
+      </div>
+      <div class="pt-6 border-t border-slate-800 flex flex-wrap items-center gap-6 text-sm text-slate-300">
+        <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-steel-500"></i> San Francisco, CA / New York, NY</div>
+        <div class="flex items-center gap-2"><i class="fa-solid fa-phone text-steel-500"></i> (415) 254-2442</div>
+        <div class="flex items-center gap-2"><i class="fa-solid fa-envelope text-steel-500"></i> geralda@seoscholars.org</div>
+      </div>
+    </div>
+    <div class="lg:col-span-5 flex justify-center">
+      <div class="w-full max-w-md bg-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-700">
+        <h3 class="text-lg font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-user-gear"></i> Professional Profile</h3>
+        <ul class="space-y-4 text-sm text-slate-300">
+          <li class="flex items-start gap-3"><i class="fa-solid fa-graduation-cap text-white mt-1"></i><div><strong class="text-white">Columbia University:</strong> B.S. Mechanical Engineering (Expected May 2027)</div></li>
+          <li class="flex items-start gap-3"><i class="fa-solid fa-compass-drafting text-white mt-1"></i><div><strong class="text-white">Core Focus:</strong> CAD, FEA Simulation, PCB Design, and Additive Manufacturing.</div></li>
+          <li class="flex items-start gap-3"><i class="fa-solid fa-shield-halved text-white mt-1"></i><div><strong class="text-white">Languages:</strong> Fluent in Spanish (Reading & Writing).</div></li>
+        </ul>
+        <div class="mt-6 pt-4 border-t border-slate-700 flex justify-between items-center text-xs text-slate-400">
+          <span>Active System Ready</span>
+          <a href="https://linkedin.com/in/geraldaguirre" target="_blank" rel="noopener noreferrer" class="text-white hover:underline font-medium">Connect on LinkedIn &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Biography</h2>
+      <p class="text-slate-600 mt-2">Get to know the person behind the engineering designs and technical projects.</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative w-72 h-80 sm:w-80 sm:h-96 rounded-2xl bg-slate-100 border-4 border-slate-200 shadow-xl overflow-hidden group">
+          <img src="SEOSeniorPhotos-66.jpg" alt="Gerald Aguirre" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20"><span class="text-xs font-semibold text-slate-800 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">Gerald Aguirre</span></div>
+        </div>
+      </div>
+      <div class="lg:col-span-7 space-y-6">
+        <h3 class="text-2xl font-bold text-slate-900">Passionate Mechanical Engineer & Innovator</h3>
+        <p class="text-slate-600 leading-relaxed">Hello! I am Gerald Aguirre, a dedicated Mechanical Engineering undergraduate with an Aerospace minor at Columbia University School of Engineering and Applied Science (Expected May 2027). My academic and extracurricular journey is driven by a deep fascination with how physical systems come together, from conceptual CAD sketching and advanced finite element analysis to hands-on PCB fabrication and rapid prototyping.</p>
+        <p class="text-slate-600 leading-relaxed">Whether designing primary airframe structures for the Columbia Airplane Club, contributing to microgravity additive manufacturing systems with the Columbia Space Initiative, or conducting biomedical research in the Dong Group and ROAR Lab, I thrive on solving complex, multidisciplinary engineering challenges. Beyond technical work, I am bilingual in Spanish and deeply committed to pushing the boundaries of aerospace, automotive, and medical hardware design.</p>
+        <div class="pt-4 flex flex-wrap gap-4">
+          <a href="https://linkedin.com/in/geraldaguirre" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-slateDark text-white font-medium text-sm hover:bg-steel-600 transition-colors flex items-center gap-2 shadow-sm"><i class="fa-brands fa-linkedin-in"></i> View LinkedIn Profile</a>
+          <a href="mailto:geralda@seoscholars.org" class="px-5 py-2.5 rounded-xl bg-slate-100 text-slate-700 font-medium text-sm hover:bg-slate-200 transition-colors flex items-center gap-2"><i class="fa-solid fa-envelope"></i> Send Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="py-20 bg-slate-50 border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Education & Coursework</h2>
+      <p class="text-slate-600 mt-2">Rigorous academic foundation at Columbia University School of Engineering and Applied Science.</p>
+    </div>
+    <div class="max-w-4xl mx-auto bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-6 border-b border-slate-200">
+        <div>
+          <h3 class="text-2xl font-bold text-slate-900">Columbia University, New York, NY</h3>
+          <p class="text-steel-600 font-semibold text-lg">B.S. Mechanical Engineering; Minor in Aerospace Engineering</p>
+        </div>
+        <span class="px-4 py-1.5 bg-slateDark text-white rounded-full text-sm font-medium w-fit">Expected May 2027</span>
+      </div>
+      <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Relevant Coursework</h4>
+      <div id="coursework" class="flex flex-wrap gap-2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-20 bg-white border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Technical Skills</h2>
+      <p class="text-slate-600 mt-2">Comprehensive engineering competencies spanning computer-aided design, advanced simulation, manufacturing, and programming.</p>
+    </div>
+    <div id="skillsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="py-20 bg-slate-50 border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Professional Experience</h2>
+      <p class="text-slate-600 mt-2">Hands-on leadership and technical contributions in engineering research, student design teams, and computer science.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-3 mb-12" role="tablist" aria-label="Experience categories">
+      <button id="engineeringTab" type="button" role="tab" aria-selected="true" aria-controls="expList" onclick="switchExperience('engineering')" class="px-6 py-3 rounded-xl bg-slateDark text-white font-semibold text-sm shadow-sm transition-all">
+        <i class="fa-solid fa-gears mr-2"></i> Mechanical & Aerospace Engineering 
+      </button>
+      <button id="csTab" type="button" role="tab" aria-selected="false" aria-controls="expList" onclick="switchExperience('cs')" class="px-6 py-3 rounded-xl bg-white text-slate-600 border border-slate-200 font-semibold text-sm transition-all">
+        <i class="fa-solid fa-code mr-2"></i> Computer Science
+      </button>
+    </div>
+    <div id="expList" role="tabpanel" aria-labelledby="engineeringTab" class="space-y-8"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-20 bg-white border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Featured Projects</h2>
+      <p class="text-slate-600 mt-2">Click on any project below to inspect detailed specifications, implementation steps, and high-resolution previews.</p>
+    </div>
+    <div id="projectGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="py-20 bg-slate-50 border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Certifications & Honors</h2>
+      <p class="text-slate-600 mt-2">Professional credentials and academic recognition supporting engineering excellence.</p>
+    </div>
+    <div id="certGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slateDark text-white py-12">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div><p class="text-lg font-bold">Gerald Aguirre</p><p class="text-sm text-slate-400 mt-1">Mechanical Engineering | Columbia University</p></div>
+    <div class="flex items-center gap-4">
+      <a href="https://linkedin.com/in/geraldaguirre" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-steel-500 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="mailto:geralda@seoscholars.org" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-steel-500 transition-colors"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-6 mt-8 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">&copy; 2026 Gerald Aguirre. All rights reserved.</div>
+</footer>
+
+<!-- MODAL -->
+<div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden p-4 sm:p-6">
+  <div class="bg-white rounded-2xl max-w-5xl w-full max-h-[95vh] overflow-y-auto shadow-2xl relative">
+    <button onclick="closeProjectModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center justify-center transition-colors z-10"><i class="fa-solid fa-xmark"></i></button>
+    <div id="modalContent" class="p-8 sm:p-12"></div>
+  </div>
+</div>
+
+<script>
+/* ============ DATA ============ */
+const COURSEWORK = ["Engineering Design","Machine Design","Solid Mechanics","Dynamics & Vibrations","Materials & Manufacturing","Composites","Aerodynamics","Rapid Prototyping for Aerospace","Microgravity Experiment Design","Continuous Control Systems","Intro to Electrical Engineering","Fluid Mechanics","Thermodynamics & Heat Transfer","Computer Graphics & Design","Intro to Machining","ME Labs I-II", "Introduction to Computer Science (Python)", "Foundations of Data Science"];
+
+const SKILLS = [
+  { icon:"cube", title:"CAD & Design", desc:"Engineering drawings, assembly modeling, and complex design iteration.", tags:["SolidWorks","Siemens NX","Fusion 360","CATIA","AutoCAD"] },
+  { icon:"chart-line", title:"Analysis & Simulation", desc:"Structural FEA, thermal evaluation, computational fluid dynamics, and scripting.", tags:["Ansys","SolidWorks FEA","CFD","MATLAB/Simulink"] },
+  { icon:"industry", title:"Manufacturing & Prototyping", desc:"Rapid prototyping, precision machining, and tooling design.", tags:["CNC Machining","Injection Molding","3D Printing","Laser Cutting"] },
+  { icon:"microchip", title:"Electronics & Hardware", desc:"PCB layout, board bring-up, microcontroller systems, and circuit modeling.", tags:["KiCad","Eagle","Soldering & Bring-up","Arduino"] },
+  { icon:"code", title:"Programming & Tools", desc:"Software development, technical documentation, and design suites.", tags:["Python","JavaScript","HTML/CSS","Figma","Google Workspace","Microsoft Office Suite","Advanced Excel","Word","PowerPoint"] },
+  { icon:"gears", title:"Core Engineering", desc:"Design principles, material selection, and rigorous testing protocols.", tags:["Machine Design","Materials Selection","DFM / DFA","Test Planning"] }
+];
+
+const EXPERIENCE = [
+  { role:"Structures Engineer", org:"Columbia Airplane Club, Columbia University", date:"Sep 2026 - Present", bullets:[
+    "Design lightweight primary airframe structures, including wing spars, ribs, and fuselage supports, in SolidWorks for the AIAA Design/Build/Fly competition aircraft.",
+    "Perform finite element analysis of structural loads, stress distribution, and deformation to drive material selection, weight optimization, and structural test planning."] },
+  { role:"Controls Engineer", org:"Columbia Space Initiative", date:"Jan 2026 - Present", bullets:[
+    "Developed and iterated CAD models for an in-space 3D printer, including structural frames, print heads, and material-handling systems, under microgravity design constraints.",
+    "Evaluated materials and structural performance under thermal variation and launch loads to improve hardware reliability for space-based additive manufacturing."] },
+  { role:"Research Fellow", org:"Dong Group, Columbia University", date:"Jan 2026 - Present", bullets:[
+    "Designed micro-scale components of a steerable neural electrode in SolidWorks and used Ansys FEA to assess stress distribution, bending behavior, and buckling during curved insertion.",
+    "Selected polymers by stiffness, flexibility, and biocompatibility and validated performance through gel phantom insertion tests with optical imaging and quantitative data analysis."] },
+  { role:"Research Fellow", org:"Flower Memorial Lab, Columbia University", date:"Jun 2025 - Jul 2025", bullets:[
+    "Designed PCB hardware for a medical fixation device in KiCad, optimizing component layout and engineering a sealed enclosure to protect the electronics.",
+    "Modeled series LRC circuits in MATLAB, analyzing voltage drops, current flow, resonance, and transient response to optimize electronic design parameters."] },
+  { role:"Controls Engineer", org:"Columbia University Formula Racing", date:"Sep 2023 - May 2025", bullets:[
+    "Prototyped a redesigned pedal baseplate using 3D printing and laser cutting, then assembled and tested it on the existing chassis to validate fit and function.",
+    "Collaborated with teammates to refine design specifications and ensure compatibility with existing vehicle systems while building hands-on manufacturing and assembly experience."] },
+  { role:"Research Assistant", org:"Robotics and Rehabilitation (ROAR) Lab, Columbia University", date:"Aug 2024 - May 2025", bullets:[
+    "Designed and built a robotic neck brace prototype in CAD, expanding head-movement range for mobility and comfort, and developed thread designs that align sensors and joints in parallel to increase stability and eliminate unwanted motion.",
+    "Engineered a new PCB layout in Eagle integrating a 5V power supply to improve the functionality and performance of the prototype."] },
+  { role:"Proposal Developer & Researcher", org:"NASA L'SPACE NPWEE Program, Remote", date:"Sep 2024 - Dec 2024", bullets:[
+    "Analyzed experimental data and literature to define proposal metrics for the Basalt Aerogel Shock-absorbing Insulation System, including thermal conductivity and durability across planetary environments.",
+    "Modeled the layered insulation design in Siemens NX (aerogel, basalt fiber fabric, polyimide encapsulation) to support design visualization and proposal documentation."] }
+];
+
+const CS_EXPERIENCE = [
+  { role:"Web Development Intern", org:"Code Tenderloin | San Francisco, CA", date:"Jun 2025 - Aug 2025", bullets:[
+    "Developed responsive websites using HTML, CSS, and JavaScript, implementing front-end components to improve interface functionality and usability.",
+    "Built and refined web applications through iterative development, debugging, and user feedback to improve the overall user experience."] },
+  { role:"Data Intern (Remote)", org:"Atticus Project | San Francisco, CA", date:"Jun 2023 - Jul 2023", bullets:[
+    "Applied AI and prompt engineering techniques to analyze and simplify legal agreements, translating complex terminology into more accessible language.",
+    "Organized and evaluated datasets containing legal agreements from approximately 60-70 major companies, including Tesla, Apple, GMC, and Logitech."] },
+  { role:"Computer Science Student", org:"Mission Bit | San Francisco, CA", date:"Feb 2021 - 2023", bullets:[
+    "Developed websites using HTML and applied programming fundamentals to create interactive web content through hands-on computer science coursework.",
+    "Designed and developed an educational game using Unity to promote COVID-19 health awareness and prevention, integrating interactive gameplay with public health information."] },
+  { role:"Program Participant", org:"Google Code Next", date:"2022", bullets:[
+    "Participated in computer science and technology-focused workshops designed to strengthen programming knowledge and computational thinking.",
+    "Practiced applying coding concepts, logical reasoning, and problem-solving techniques through technical learning activities."] },
+  { role:"AI & Machine Learning Camp Participant", org:"Stanford STEM Outreach AI Camp | Palo Alto, CA", date:"May 2022 - Jun 2022", bullets:[
+    "Collaborated with a five-student team to develop, test, and deploy an AI-based application that identifies emotions from user-provided text.",
+    "Applied machine learning and natural language processing concepts to text classification, supporting the development and testing of an emotion-detection system."] },
+  { role:"Product Development Intern (Remote)", org:"Cornet Software Startup | San Francisco, CA", date:"Feb 2022 - Jun 2022", bullets:[
+    "Collaborated with software engineers to evaluate and improve the usability of a college task management application, contributing to product development and user acquisition strategies.",
+    "Analyzed software user-testing results, identified usability issues, and provided actionable feedback to guide application improvements."] }
+];
+
+const CERTS = [
+  { icon:"bridge", title:"QuestBridge Scholar", year:"2022", desc:"National recognition supporting exceptional academic achievement and leadership." },
+  { icon:"graduation-cap", title:"10,000 Degrees Scholar", year:"2022", desc:"Scholarship and professional mentorship program backing higher education." },
+  { icon:"mountain-sun", title:"Students Rising Above Scholar", year:"2022", desc:"Comprehensive leadership and career development fellowship." },
+  { icon:"handshake", title:"SEO Scholar", year:"2019", desc:"Rigorous academic and professional development fellowship supporting high-achieving scholars." }
+];
+
+const PROJECTS = {
+  airplaneClub: { icon:"plane-departure", badge:"Aerospace Structures", kicker:"Columbia Airplane Club", cardTitle:"Fuselage & Hardware Container Design",
+    title:"Columbia Airplane Club - Fuselage & Hardware Container", subtitle:"AIAA Design/Build/Fly Competition Aircraft Structures",
+    short:"Designed and engineered internal hardware containment systems and primary fuselage structures for the AIAA Design/Build/Fly competition aircraft, focusing on weight reduction, modular assembly, and load distribution.",
+    image:"https://images.unsplash.com/photo-1517976487139-f093e0b25e17?auto=format&fit=crop&w=1200&q=80",
+    description:"Designed and engineered internal hardware containment systems and primary fuselage structures for the AIAA Design/Build/Fly competition aircraft at Columbia University. Focused on structural load optimization, weight reduction, and secure modular housing for onboard electronics and hardware components.",
+    highlights:["Designed lightweight fuselage sections, internal bulkheads, and custom hardware containers in SolidWorks for structural integrity.","Performed finite element analysis (FEA) on airframe joints and container mounting brackets to withstand flight and handling loads.","Collaborated with multidisciplinary team members to integrate avionics and hardware securely within the aircraft envelope."],
+    steps:[["Parametric CAD Modeling","Modeled fuselage contours, rib supports, and dedicated hardware containers using SolidWorks with strict weight and space constraints."],["Structural FEA Validation","Simulated load distribution and stress concentrations across airframe joints and container mounting interfaces."],["Prototyping & Integration","Fabricated physical test articles to verify hardware clearance, ease of access, and structural fit-up."]],
+    tags:["SolidWorks","FEA Analysis","Structural Integration","Aerospace Design","Rapid Prototyping"] },
+
+  delageCar: { icon:"car", badge:"Manufacturing & CAD/CAM", kicker:"MECE E3610 Midterm Project", cardTitle:"1927 Delage Type 15S8 Model",
+    title:"1927 Delage Type 15S8 Grand Prix Model", subtitle:"MECE E3610 Midterm Design & Manufacturing Project",
+    short:"Designed and manufactured a scaled physical model of the 1927 Delage Type 15S8 Grand Prix car using 3D printing, silicone body casting, CNC-milled aluminum injection molds, and polypropylene wheel molding.",
+    image:"Car Mold.png", image2:"Assembly Car.png", pdf:"Manufacturing___Final_Report.pdf",
+    description:"Executed a multi-process manufacturing project building a physical model of the 1927 Delage Type 15S8 Grand Prix car. The project integrated SolidWorks CAD modeling, Fusion 360 CAM toolpath generation, 3D printing of mold housings, silicone body casting, CNC-milled aluminum molds, and polypropylene injection molding for the wheels.",
+    highlights:["Designed a split silicone mold with dual sprues, risers, and locating corners in SolidWorks to cast the car body in flexible silicone.","Programmed CAM toolpaths and machined aluminum molds on a CNC mill for polypropylene injection-molded wheels.","Fabricated custom axles from 1/8-inch aluminum rod stock and integrated a 3D-printed cockpit assembly."],
+    steps:[["Mold Design & CAD","Modeled the car geometry and negative mold cavity with integrated sprues, vents, and alignment features."],["Silicone Body Casting","Mixed and vacuum-degassed liquid silicone, casting it into optimized 3D-printed dual-gate molds."],["CNC Wheel Molds & CAM","Generated Fusion 360 CAM G-code and machined aluminum blocks to create front and back wheel molds."],["Injection Molding & Assembly","Injected molten polypropylene into the molds, polished axles, and completed final assembly."]],
+    tags:["SolidWorks","Fusion 360 CAM","Silicone Casting","CNC Machining","Injection Molding"] },
+
+  planeModel: { icon:"plane", badge:"CAD Modeling & Reverse Engineering", kicker:"Mechanical Engineering CAD Project", cardTitle:"Plane CAD Modeling & Reverse Engineering",
+    title:"Plane CAD Modeling & Reverse Engineering", subtitle:"Parametric 3D Modeling and Geometric Reconstruction",
+    short:"Reverse-engineered a physical model airplane using caliper measurements and advanced CAD features, including lofts, wraps, and revolved geometry, to recreate complex curved surfaces and aircraft components.",
+    description:"Developed a detailed parametric CAD model of a physical airplane through reverse engineering and geometric reconstruction. Followed the original design intent using lofts, wraps, and revolved features to recreate complex curved surfaces. Organized sketches and features to allow modifications and considered potential manufacturing requirements. Simplified internal reinforcements, supports, and small components that were not externally visible, while approximating irregular details such as the propeller base where precise measurements were difficult.",
+    highlights:["Reconstructed complex airplane geometry using lofts, wraps, and revolved CAD features.","Used caliper measurements and visual references to recreate external geometry and approximate hard-to-measure features.","Organized parametric sketches, dimensions, and features to preserve design intent and support revisions.","Simplified internal reinforcements, supports, and minor components without compromising the external representation.","Resolved underdefined and overconstrained sketches, cascading rebuild errors, and difficult surface transitions through iterative adjustments."],
+    steps:[["Design Planning & Measurements","Examined the physical airplane, identified key geometric features, and collected caliper measurements for reference sketches."],["Parametric CAD Modeling","Built curved surfaces and components using lofts, wraps, and revolved features while organizing sketches and the feature tree."],["Simplifications & Refinement","Omitted nonvisible internal details and approximated small or irregular features, including parts of the propeller base."],["Troubleshooting & Validation","Repaired sketch constraints and failed dependent features; compared lofts and sweeps to select suitable modeling methods."]],
+    tags:["CAD Modeling","Reverse Engineering","Parametric Design","Loft Features","Revolved Features","Surface Modeling","Geometric Constraints","Design for Manufacturing"] },
+
+  fourBarLinkage: { icon:"diagram-project", badge:"Machine Design & Kinematics", kicker:"MECE E3409 Machine Design", cardTitle:"Four-Bar Linkage Design & Assembly",
+    title:"Four-Bar Linkage: Synthesis, Design & Assembly", subtitle:"MECE E3409 Machine Design, PA1 Sketch Synthesis and PA3 Full Assembly (Fall 2026)",
+    short:"End-to-end design of a button-pressing four-bar linkage: graphical three-position synthesis in SolidWorks sketch blocks, then a full assembly with bearing-supported pivot joints, a 3-position rotary solenoid pusher, and hard stops.",
+    images:["MD Parts.png","MD Stopper.png","PA3_Joint_Section.png","PA3_Full_Assembly.png"],
+    pdf:"Machine_Design_PA3_Assembly.pdf",
+    description:"Designed a four-bar linkage that moves a 2\" x 1/2\" x 1/4\" acrylic piece to three button-pair locations on a 24\" x 24\" playing field, from first sketch to full assembly. The synthesis stage used a parametric SolidWorks Sketch Block layout and a graphical construction method so the coupler shape, button positions, and ground joints could be changed and re-evaluated quickly. The assembly stage turned that layout into hardware: link, coupler, and mounting-plate joints with fasteners and bearings, a 3-position rotary solenoid that presses the buttons, and two hard stops that limit travel.",
+    highlights:["Dimensioned an arena sketch of all button locations relative to the origin, kept separate from the linkage sketch.","Converted the coupler (acrylic presser plus two moving-joint lines) into a sketch block, copied it into three positions, and set each angle with FIX relations.","Located both ground joints by constructing a circle through the three positions of each moving joint (graphical three-position synthesis).","Evaluated designs on linkage size and transmission angle (target near 90°, always within 30° to 150°), and checked for branch defects by animating from position 1 through 3.","Standardized every pivot on one hardware stack: shoulder screw (10-24 thread), a washer and needle thrust bearing at both the screw head and the nylon lock nut, SAE 841 sleeve bearings, and a spacer between the links.","Used identical joints for the three shorter pivots (1\" shoulder screw with 1/8\" spacers) and a longer joint at the mounting plate (1.75\" shoulder screw with a 1\" spacer).","Designed the button mechanism around a 3-position rotary solenoid (button couples, green button, neutral), with the acrylic plate and a custom green button pusher mounted on a hub with set screws.","Added two hard stops so the linkage cannot travel past the button-pushing area, and documented the assembly at both stop limits."],
+    steps:[["Sketch Blocks & Synthesis","Built the arena and linkage sketches, copied the coupler block to three button positions, and used three-point circles to find the ground joints."],["Evaluation & Iteration","Animated the linkage, tracked the transmission angle, and iterated to avoid branch defects and reduce size."],["Joints & Solenoid Mechanism","Specified the shoulder screw, spacer, bearing, and lock nut stack, and designed the hub carrying the acrylic plate and green button pusher on the solenoid."],["Full Assembly & Hard Stops","Combined plates, links, coupler, solenoid, and fasteners, and verified the mechanism at both hard-stop limits."]],
+    tags:["SolidWorks","Sketch Blocks","Four-Bar Linkage","Kinematic Synthesis","Transmission Angle","CAD Assembly","Rotary Solenoid","Bearings & Fasteners"] },
+
+  slideToy: { icon:"puzzle-piece", badge:"Product Design", kicker:"Drawn by Gerald Aguirre & Levis Alvaro", cardTitle:"Slide to Solve Toy",
+    title:"Slide to Solve Toy", subtitle:"Mechanical Design & Prototyping",
+    short:"Full parametric assembly, detailed BOM, and exploded view drawings for a multi-component ABS plastic sliding number puzzle game.",
+    image:"Slidetoy.png", image2:"SlideToy BOM.png", pdf:"Working Package.pdf",
+    description:"Designed and engineered a mechanical puzzle toy ('Slide to Solve') featuring a multi-component sliding number assembly, internal swing shafts, custom housing, and precision-toleranced ABS plastic components.",
+    highlights:["Created assembly drawings, exploded views, and part blueprints with detailed GD&T dimensions in SolidWorks.","Engineered a Bill of Materials specifying ABS material properties across 9 distinct part assemblies.","Designed interlocking slider mechanisms, slot paths, and sub-panel guides for smooth tactile engagement."],
+    steps:[["Parametric CAD Assembly","Modeled all 9 core components with strict clearance tolerances."],["Drafting & Blueprints","Generated multi-sheet drawings with dimensions, fillets, hole callouts, and scale ratios."],["Material & BOM Specification","Compiled a BOM specifying ABS parameters and component quantities."]],
+    tags:["SolidWorks","BOM Specification","Engineering Drawings","GD&T","Rapid Prototyping"] },
+
+  deadFloat: { icon:"user-astronaut", badge:"Microgravity Systems", kicker:"Columbia Microgravity | PDR", cardTitle:"Dead Float Rescue Device",
+    title:"Dead Float Rescue Device", subtitle:"Columbia Microgravity | Preliminary Design Review, October 29, 2026",
+    short:"Handheld counter-rotating dual-EDF tool for controlled translation in microgravity, designed for intra-vehicular emergencies and taken through a Preliminary Design Review for a parabolic-flight test.",
+    description:"A handheld counter-rotating fan tool for controlled translation in microgravity, intended for intra-vehicular emergencies where a crew member is floating with nothing to push off. The research question: how effective and controlled is a handheld electric-fan tool for translating in microgravity, and how does thrust alignment with the center of mass affect unintended motion? Advisor: Prof. Cody Paige.",
+    highlights:["Electronics lead: designed the power and control architecture, including a main fuse and removable arming connector, a power split to the propulsion and control branches, and a 5 V regulator for the Arduino UNO R4.","PCB and wiring design: integrated the thumb throttle (analog input), two 80 A ESCs driven by PWM, the MPU-6050 IMU over I²C, a microSD logger over SPI, and a battery voltage sense line into one control schematic.","Baseline design: two 64 mm counter-rotating EDFs (CW + CCW) to cancel net reaction torque, powered by a 4S LiPo (14.8 V, 5200 mAh) through two 80 A ESCs.","Control: Arduino UNO R4 reading a thumb throttle; safety logic requires armed + trigger held + valid input, with zero thrust on release or fault.","Hypothesis: about 0.25 m/s² single-axis acceleration (20 N on an 80 kg user), with thrust through the center of mass minimizing angular velocity and off-axis drift.","Data acquisition: MPU-6050 IMU, throttle and battery logging to microSD, plus multi-camera body-marker tracking for 6-DoF analysis.","Safety: tether, dead-man trigger, removable arming connector, fusing, guarded EDFs, and a preliminary hazard matrix covering LiPo thermal events, blade contact, runaway thrust, and shorting.","Planned schedule to CDR (Dec 5/12) with a BOM of $551.60 and 20% contingency."],
+    steps:[["Concept & Prior Art","Reviewed NASA Astrobee, the SAFER backpack, and sea scooters to shape a handheld twin-fan design."],["Electronics & PCB Design","Defined power distribution, protection, the control block diagram, and a full schematic with data logging."],["CAD & Ergonomics","Modeled the ergonomic handle with thumb throttle and dead-man trigger; shell, ducts, and integration CAD in progress."],["Flight Integration & Safety","Wrote the one-parabola ConOps, aircraft integration concept, six safety requirements, and hazard assessment."]],
+    tags:["PCB Design","EDF Propulsion","Arduino Systems","LiPo Power Systems","Hazard Analysis","Microgravity"] },
+
+  rescueUAV: { icon:"kit-medical", badge:"Aerospace Senior Design", kicker:"Aero Senior Design Group #1 | PDR", cardTitle:"Rescue UAV",
+    title:"Rescue UAV: Search & Emergency Supply Delivery Quadcopter", subtitle:"Aero Senior Design Group #1 | Preliminary Design Review, Columbia Engineering",
+    short:"Quadcopter UAV to assist emergency responders with search and delivery of emergency supplies, with a custom ground-station dashboard validated in ArduPilot simulation and a Pixhawk-based hardware architecture.",
+    description:"A senior design team project to build a UAV that assists emergency responders in search and delivery of emergency supplies. The planned system is a weatherproof quadcopter with a supply payload bay, visual and thermal cameras, and air quality sensors. Sprint 1 focused on component selection, ordering, and software readiness; Sprint 2 moves from simulation to integrated real hardware while sizing motors and validating the airframe design and manufacturing methods.",
+    highlights:["Selected and ordered a compatible hardware stack: Pixhawk 6C flight controller, PM07 power board, Holybro Micro M10 GPS, SIYI HM30 radio/camera/ground-station set, and a 6S-to-4S BEC, all powered from a 22.2 V 6S battery.","Drew the hardware wiring architecture covering power distribution, ESCs and motors, telemetry, camera feeds, and an ESP32-based air quality sensor.","Built a custom dashboard with quick controls (arm, takeoff, loiter, RTL, land), live telemetry, a live satellite map, a video feed, and PM2.5/PM10 environmental readings.","Demonstrated arm, takeoff, guided flight, and return-to-launch in an ArduPilot Mission Planner simulation.","Passed 4 of 5 Sprint 1 readiness gates (simulated flight control, telemetry, environmental data display, operator controls); wireless telemetry was not tested because the radio hardware had not yet arrived.","Maintained a risk register covering radio and sensor delivery delays, incomplete motor sizing, hardware/software incompatibility, and an undefined payload release mechanism."],
+    steps:[["Component Selection & Ordering","Researched compatibility across suppliers, then ordered the flight controller, power, GPS, radio, and camera hardware despite long overseas lead times."],["Software Prototype & Simulation","Developed the ground-station dashboard and validated flight functions in ArduPilot Mission Planner before hardware arrived."],["Hardware Integration","Sprint 2 plan: bring up the flight controller, radio controller, wireless link and video, real air quality sensor, and a failsafe safety check on the bench."],["Airframe Preparation","Size and order motors from a thrust-to-weight estimate, and validate CAD (Fusion) and subscale SLS printing methods for the future body."]],
+    tags:["ArduPilot","Pixhawk 6C","Mission Planner","UAV Systems Integration","Dashboard Development","Risk Management"] },
+
+  solarTracker: { icon:"solar-panel", badge:"Mechatronics & Control", kicker:"MECE E3028 Lab II", cardTitle:"Dual Axis Solar Tracker",
+    title:"Dual Axis Solar Tracker", subtitle:"MECE E3028 Mechanical Engineering Laboratory II (Lab Group 7)",
+    short:"Designed and evaluated an automated dual-axis solar tracker using an Arduino Uno, a four-quadrant LDR array, and a hybrid stepper/DC motor actuation scheme.",
+    image:"Solar Tracker.png", image2:"Solar Tracker Final Design.png", pdf:"MECE_Lab_II_Report___Solar_Tracker.pdf",
+    description:"Designed and evaluated an automated dual-axis solar tracking system to maximize photovoltaic energy capture using an Arduino Uno, differential light sensing from a four-quadrant LDR array, and a closed-loop proportional control algorithm.",
+    highlights:["Integrated a 5V stepper motor for horizontal azimuth control and a 6V DC motor for vertical elevation control.","Achieved a peak photovoltaic output of 7.93 V at an optimal alignment of 90° azimuth and 45° altitude.","Engineered custom 3D-printed mounts, supporting wheels, and wiring strain-relief channels to eliminate motor jitter and wire tension."],
+    steps:[["Mechanical & Electrical Setup","Mounted the rotating base, DC motor, potentiometer, and LDR array onto custom 3D-printed PLA housing."],["Arduino Control Logic","Programmed closed-loop proportional control with signal smoothing and calibration multipliers."],["Performance Characterization","Measured output voltage and angular tracking errors across 18 azimuth and altitude combinations."]],
+    tags:["Arduino Uno","Stepper & DC Motors","Closed-Loop Control","Sensor Array","3D Printing"] },
+
+  jackAssembly: { icon:"wrench", badge:"Manufacturing & CAM", kicker:"Advanced Manufacturing Project", cardTitle:"Mechanical Jack Assembly & Machining",
+    title:"Mechanical Jack Assembly & Machined Links", subtitle:"CAM Programming, CNC Machining & 3D Printing Workflow",
+    short:"Full manufacturing and assembly workflow for a mechanical jack, combining 3D-printed left/right link arms, CAM-programmed CNC block machining, and tolerance integration.",
+    description:"Executed a hybrid manufacturing and assembly project to build a working mechanical jack. Combined additive manufacturing for custom left and right link arms with CAM and CNC machining for precision structural blocks.",
+    highlights:["Programmed toolpaths and generated G-code in CAM software for precision CNC machining of the blocks.","3D printed custom left and right link arms with optimized infill for rigidity and load-bearing performance.","Performed tolerance stack-up analysis and final assembly of pins, fasteners, and links."],
+    steps:[["CAM Toolpath Generation","Developed milling strategies, speeds, feeds, and toolpaths for block components."],["CNC Block Machining","Machined stock blocks to strict tolerances and clean surface finishes."],["3D Printing Custom Links","Fabricated left and right link components via additive manufacturing."],["Mechanical Assembly & Fit-Up","Fitted pins, fasteners, and blocks with the printed links and tested the jack."]],
+    tags:["CAM","CNC Machining","3D Printing","Rapid Prototyping","Mechanical Assembly"] },
+
+  spacePrinter: { icon:"satellite", badge:"Space Systems", kicker:"Columbia Space Initiative", cardTitle:"In-Space 3D Printer",
+    title:"In-Space 3D Printer", subtitle:"Columbia Space Initiative",
+    short:"CAD iteration and structural optimization for a microgravity additive manufacturing system under extreme thermal and launch loads.",
+    description:"Developed and iterated CAD models for an in-space 3D printer under microgravity design constraints. Engineered structural frames, print heads, and material-handling sub-assemblies.",
+    highlights:["Performed finite element simulations to evaluate structural performance under thermal variation and launch loads.","Optimized material selection to maximize reliability and minimize mass for space deployment.","Collaborated across student engineering teams to align mechanical sub-systems with avionics."],
+    steps:[["Conceptual CAD Modeling","Designed modular print-head assemblies and lightweight frames in SolidWorks."],["FEA Thermal & Launch Simulation","Ran structural stress analysis under vibrational launch profiles and thermal gradients."],["Prototyping & Integration","Fabricated test articles and integrated extrusion mechanisms with avionics boards."]],
+    tags:["SolidWorks","FEA Analysis","Thermal Testing","Additive Manufacturing"] },
+
+  neuralElectrode: { icon:"dna", badge:"Biomedical Engineering", kicker:"Dong Group, Columbia", cardTitle:"Steerable Neural Electrode",
+    title:"Steerable Neural Electrode", subtitle:"Dong Group, Columbia University",
+    short:"Design of micro-scale components for neural probing with Ansys FEA validation and gel phantom optical insertion testing.",
+    description:"Designed micro-scale components for a steerable neural electrode in SolidWorks and used Ansys FEA to evaluate stress distribution, bending behavior, and buckling during curved tissue insertion.",
+    highlights:["Selected polymers based on stiffness, flexibility, and biocompatibility.","Validated performance through gel phantom insertion tests paired with optical imaging.","Conducted quantitative data analysis to refine geometry and minimize tissue deflection."],
+    steps:[["Micro-Component Design","Drafted flexible polymer micro-electrode structures in SolidWorks."],["Ansys FEA Buckling Analysis","Simulated curved insertion to prevent premature buckling."],["Gel Phantom Validation","Performed insertion tests into transparent hydrogel phantoms and captured optical displacement data."]],
+    tags:["SolidWorks","Ansys FEA","Polymer Selection","Optical Imaging"] },
+
+  teslaValve: { icon:"water", badge:"Fluid Dynamics & CFD", kicker:"MECE E3100 Fluids Project", cardTitle:"Tesla Valve Analysis",
+    title:"Tesla Valve Analysis", subtitle:"MECE E3100 Introduction to Mechanics of Fluids (Team #10)",
+    short:"Analyzed laminar flow performance of a Tesla Valve across Reynolds numbers from 50 to 350 using ANSYS Fluent CFD, evaluating diodicity, grid convergence, and geometric design modifications.",
+    image:"Tesla Valve.png", image2:"Valve Results.png", pdf:"TeslaValve_Final_Fluids.pdf",
+    description:"Analyzed the performance of a Tesla Valve under laminar flow using computational fluid dynamics in ANSYS Fluent across Reynolds numbers from 50 to 350. Evaluated diodicity, grid convergence, and geometric design modifications.",
+    highlights:["Performed CFD simulations for forward and reverse flows across Re = 50 to 350, reaching a diodicity of 1.41 at Re = 350.","Conducted a grid convergence study validating baseline mesh accuracy within ~3% relative to a fine mesh.","Showed that shortening the baffle length to 3 cm increased diodicity up to 2.18."],
+    steps:[["CAD & Mesh Generation","Assembled 2D plane geometry in SolidWorks and created baseline, coarse, and fine meshes."],["ANSYS Fluent Simulations","Set up forward and reverse flow boundary conditions using air across multiple Reynolds numbers."],["Design Iterations & Diodicity","Analyzed pressure drop ratios and recirculation, and optimized baffle lengths and inner radii."]],
+    tags:["ANSYS Fluent","CFD Simulation","Fluid Mechanics","Diodicity Analysis"] },
+
+  wingDesigns: { icon:"jet-fighter", badge:"Aerospace & CFD", kicker:"MECE E3100 Research Paper", cardTitle:"Complex Variable Wing Designs",
+    title:"Complex Variable Wing Designs & Aerodynamics", subtitle:"MECE E3100 Introduction to Mechanics of Fluids Research Paper",
+    short:"Comparative study of variable and non-conventional wing configurations (swing-wing, forward-swept, delta, swept passenger jets), backed by an ONERA M6 transonic CFD case study.",
+    image:"Wings Ansys.png", image2:"Wings Ansys2.png", pdf:"Fluids__Final_Research.pdf",
+    description:"Conducted a comparative study of variable and non-conventional aircraft wing configurations, including swing-wings, forward-swept wings, delta wings, and swept passenger jets, backed by an ONERA M6 transonic CFD case study.",
+    highlights:["Evaluated lift generation, angle of attack effects, stall behavior, and aeroelastic divergence across multiple wing geometries.","Analyzed Grumman F-14 swing-wing mechanics, X-29 forward-swept aeroelasticity, and delta-wing vortex lift.","Ran a transonic ONERA M6 swept-wing CFD simulation in ANSYS Fluent (M∞ = 0.84) to evaluate shock-induced effects and validate solver behavior."],
+    steps:[["Literature Synthesis","Reviewed NASA technical reports and textbooks on lift-to-drag ratios, compressibility, and critical Mach numbers."],["Configuration Comparison","Analyzed trade-offs for variable sweep, forward sweep, delta, and conventional swept wings."],["Transonic ONERA M6 Simulation","Built a 3D tetrahedral mesh and ran compressible RANS with the Spalart-Allmaras model."]],
+    tags:["Aerodynamics","ANSYS Fluent","Transonic CFD","Compressible Flow","CFD Validation"] }
+};
+
+/* ============ RENDER ============ */
+const chip = "px-2 py-0.5 bg-white border border-slate-200 rounded text-xs text-slate-600";
+
+document.getElementById('coursework').innerHTML = COURSEWORK.map(c =>
+  `<span class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">${c}</span>`).join('');
+
+document.getElementById('skillsGrid').innerHTML = SKILLS.map(s => `
+  <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-lg transition-shadow">
+    <div class="w-12 h-12 rounded-lg bg-slate-800 text-white flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-${s.icon}"></i></div>
+    <h3 class="text-lg font-bold text-slate-900 mb-2">${s.title}</h3>
+    <p class="text-sm text-slate-600 mb-4">${s.desc}</p>
+    <div class="flex flex-wrap gap-2">${s.tags.map(t => `<span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-medium text-slate-700">${t}</span>`).join('')}</div>
+  </div>`).join('');
+
+function renderExperience(entries) { return entries.map(e => `
+  <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:border-slate-300 transition-all">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+      <div><h3 class="text-xl font-bold text-slate-900">${e.role}</h3><p class="text-steel-600 font-semibold">${e.org}</p></div>
+      <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium w-fit">${e.date}</span>
+    </div>
+    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm leading-relaxed">${e.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
+  </div>`).join(''); }
+
+function switchExperience(category) {
+  const engineering = category === 'engineering';
+  document.getElementById('expList').innerHTML = renderExperience(engineering ? EXPERIENCE : CS_EXPERIENCE);
+  const engineeringTab = document.getElementById('engineeringTab');
+  const csTab = document.getElementById('csTab');
+  for (const [button, active] of [[engineeringTab, engineering], [csTab, !engineering]]) {
+    button.classList.toggle('bg-slateDark', active);
+    button.classList.toggle('text-white', active);
+    button.classList.toggle('shadow-sm', active);
+    button.classList.toggle('bg-white', !active);
+    button.classList.toggle('border', !active);
+    button.classList.toggle('border-slate-200', !active);
+    button.classList.toggle('text-slate-600', !active);
+    button.setAttribute('aria-selected', String(active));
+  }
+  document.getElementById('expList').setAttribute('aria-labelledby', engineering ? 'engineeringTab' : 'csTab');
+}
+switchExperience('engineering');
+
+document.getElementById('projectGrid').innerHTML = Object.entries(PROJECTS).map(([id, p]) => `
+  <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all">
+    <div>
+      <div class="h-52 bg-slate-900 p-6 flex flex-col justify-between relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:16px_16px]"></div>
+        <div class="flex justify-between items-start relative z-10">
+          <span class="px-3 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full text-xs font-semibold">${p.badge}</span>
+          <span class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-white text-lg shadow-sm"><i class="fa-solid fa-${p.icon}"></i></span>
+        </div>
+        <div class="relative z-10">
+          <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">${p.kicker}</span>
+          <h3 class="text-xl font-bold text-white mt-0.5">${p.cardTitle}</h3>
+        </div>
+      </div>
+      <div class="p-6">
+        <p class="text-sm text-slate-600 mb-4 line-clamp-3">${p.short}</p>
+        <div class="flex flex-wrap gap-1.5 mb-4">${p.tags.slice(0,3).map(t => `<span class="${chip}">${t}</span>`).join('')}</div>
+      </div>
+    </div>
+    <div class="px-6 pb-6">
+      <button onclick="openProjectModal('${id}')" class="w-full py-2.5 rounded-xl bg-slateDark text-white font-medium text-sm hover:bg-steel-600 transition-colors flex items-center justify-center gap-2">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project Details${p.pdf ? ' & PDF' : ''}
+      </button>
+    </div>
+  </div>`).join('');
+
+document.getElementById('certGrid').innerHTML = CERTS.map(c => `
+  <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
+    <div class="w-12 h-12 rounded-xl bg-slate-800 text-white flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-${c.icon}"></i></div>
+    <div><h3 class="font-bold text-slate-900 text-base mb-1">${c.title}</h3><p class="text-xs text-slate-500 mb-2">Awarded ${c.year}</p><p class="text-sm text-slate-600">${c.desc}</p></div>
+  </div>`).join('');
+
+/* ============ MODAL ============ */
+function openProjectModal(id) {
+  const p = PROJECTS[id]; if (!p) return;
+  const imgs = p.images || [p.image, p.image2].filter(Boolean);
+
+  // PROJECT IMAGES: SMALLER, CENTERED, NO CROPPING
+  const img = src => `
+    <div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-slate-50 flex items-center justify-center p-4">
+      <img
+        src="${src}"
+        alt="${p.title}"
+        class="block max-w-full h-auto mx-auto rounded-xl"
+        onerror="this.parentElement.style.display='none'"
+      >
+    </div>`;
+
+  document.getElementById('modalContent').innerHTML = `
+    <div class="space-y-8">
+      <div class="border-b border-slate-200 pb-6">
+        <span class="px-3 py-1 bg-slate-100 text-slate-800 rounded-full text-xs font-semibold">${p.badge}</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">${p.title}</h2>
+        <p class="text-steel-600 font-semibold mt-1">${p.subtitle}</p>
+      </div>
+      ${imgs.length ? `<div class="grid grid-cols-1 ${imgs.length > 1 ? 'sm:grid-cols-2' : ''} gap-4">${imgs.map(img).join('')}</div>` : ''}
+      <div><h3 class="text-lg font-bold text-slate-900 mb-2">Project Overview</h3><p class="text-slate-600 leading-relaxed">${p.description}</p></div>
+      <div><h3 class="text-lg font-bold text-slate-900 mb-3">Key Engineering Contributions</h3>
+        <ul class="space-y-2">${p.highlights.map(h => `<li class="flex items-start gap-3 text-sm text-slate-600"><i class="fa-solid fa-check text-steel-500 mt-1 shrink-0"></i><span>${h}</span></li>`).join('')}</ul></div>
+      <div><h3 class="text-lg font-bold text-slate-900 mb-4">Implementation Steps & Workflow</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">${p.steps.map((s, i) => `
+          <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+            <span class="text-xs font-bold text-steel-600 uppercase tracking-wider">Step 0${i + 1}</span>
+            <h4 class="font-bold text-slate-900 mt-1 mb-2">${s[0]}</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">${s[1]}</p>
+          </div>`).join('')}</div></div>
+      ${p.pdf ? `<div class="border-t border-slate-200 pt-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2"><i class="fa-solid fa-file-pdf text-red-500"></i> Project Report & Documentation</h3>
+          <a href="${p.pdf}" target="_blank" rel="noopener noreferrer" class="text-xs text-steel-600 font-semibold hover:underline">Open Full PDF in New Tab &rarr;</a>
+        </div>
+        <div class="w-full h-[550px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100 shadow-inner"><embed src="${p.pdf}" type="application/pdf" width="100%" height="100%"></div></div>` : ''}
+      <div><h3 class="text-lg font-bold text-slate-900 mb-3">Technologies & Tools</h3>
+        <div class="flex flex-wrap gap-2">${p.tags.map(t => `<span class="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold">${t}</span>`).join('')}</div></div>
+      <div class="pt-6 border-t border-slate-200 flex justify-end">
+        <button onclick="closeProjectModal()" class="px-8 py-3 bg-slateDark text-white rounded-xl text-sm font-medium hover:bg-steel-600 transition-colors shadow-md">Close Details</button>
+      </div>
+    </div>`;
+  document.getElementById('projectModal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal() {
+  document.getElementById('projectModal').classList.add('hidden');
+  document.body.style.overflow = 'auto';
+}
+
+document.getElementById('projectModal').addEventListener('click', e => { if (e.target.id === 'projectModal') closeProjectModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProjectModal(); });
+</script>
+</body>
+</html>
